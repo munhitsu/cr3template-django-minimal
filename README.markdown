@@ -1,10 +1,8 @@
-=======================================
 cr3template-minimal-django
 =======================================
 Minimal template for cr3studio projects
 
 
--------------
 Project start
 -------------
 - Download template
@@ -13,14 +11,12 @@ Project start
 - alter settings.py
 
 
------------
 Other steps
 -----------
 - configure git repository on server (fab might be of use)
 
 
 
--------
 urls.py
 -------
 
@@ -44,7 +40,6 @@ Minimal file::
 	    (r'^', include('cms.urls')),
 	)
 
------------
 settings.py
 -----------
 
