@@ -1,0 +1,14 @@
+*.egg-info
+*.egg
+*.pyc
+*.db
+.installed.cfg
+bin/
+develop-eggs/
+downloads/
+eggs/
+parts/
+*~
+fcgi.port
+.project
+.pydevproject
