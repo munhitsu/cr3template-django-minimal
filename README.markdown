@@ -20,7 +20,7 @@ Other steps
 urls.py
 -------
 
-Minimal file::
+Minimal file:
 
 	from django.conf.urls.defaults import patterns, include, handler500
 	from django.contrib import admin
@@ -43,7 +43,7 @@ Minimal file::
 settings.py
 -----------
 
-Minimal file::
+Minimal file:
 
 	import os
 	import socket
