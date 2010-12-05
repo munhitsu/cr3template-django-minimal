@@ -12,17 +12,15 @@ Project start
 - execute make
 - alter settings.py
 
+
+-----------
 Other steps
 -----------
 - configure git repository on server (fab might be of use)
 
 
 
-TODO:
-make fabfile.py project independent (remote username is in there)
-how to embed some settings goodies
-
-
+-------
 urls.py
 -------
 
@@ -50,7 +48,8 @@ Minimal file::
 settings.py
 -----------
 
-minimal file::
+Minimal file::
+
 	import os
 	import socket
 	
@@ -173,3 +172,10 @@ minimal file::
 	    'debug_toolbar.panels.signals.SignalDebugPanel',
 	    'debug_toolbar.panels.logger.LoggingPanel',
 	)
+
+
+----
+TODO
+----
+make fabfile.py project independent (remote username is in there)
+how to embed some settings goodies
