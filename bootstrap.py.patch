@@ -1,0 +1,8 @@
+43c43,47
+< has_broken_dash_S = bool(int(stdout.strip()))
+---
+> 
+> if sys.platform == 'darwin':
+> 	has_broken_dash_S = True
+> else:
+> 	has_broken_dash_S = bool(int(stdout.strip()))
