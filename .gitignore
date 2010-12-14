@@ -2,6 +2,7 @@
 *.egg
 *.pyc
 *.db
+*.bak
 .installed.cfg
 bin/
 develop-eggs/

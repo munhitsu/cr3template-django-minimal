@@ -3,7 +3,7 @@
 
 bootstrap.py :
 	wget http://svn.zope.org/*checkout*/zc.buildout/trunk/bootstrap/bootstrap.py
-	patch bootstrap.py < bootstrap.py.patch
+	patch bootstrap.py < patches/bootstrap.py.patch
 
 bin/buildout : bootstrap.py
 	python bootstrap.py

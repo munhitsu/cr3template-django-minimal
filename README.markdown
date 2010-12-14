@@ -14,7 +14,7 @@ Project start
 Other steps
 -----------
 - configure git repository on server (fab might be of use)
-
+- precondition is to have libjpeg installed on dev host (in case of cms usage)
 
 
 urls.py
