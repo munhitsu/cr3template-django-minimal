@@ -32,7 +32,7 @@ fab goodies (connecting with remote server)
 	cat $HOME/.ssh/id_dsa.pub
 register it using: https://github.com/munhitsu/cr3components/admin
 - start app:
-	logon server
+	ssh server
 	cd django_site
 	make
 	/cr3studio/bin/restart-app-django
