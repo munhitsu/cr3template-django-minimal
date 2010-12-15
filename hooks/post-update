@@ -4,4 +4,4 @@ unset GIT_DIR
 
 cd $HOME/django_site
 git pull
-/cr3admin/bin/restart-app
+/cr3admin/bin/restart-app-django

@@ -7,10 +7,11 @@ import os
 HOME = os.environ['HOME']
 USER = os.environ["USER"]
 
-env.user = "bt3"
+env.user = "update me !!!"
 
 
 remote_repo_sub_dir = "repos/git/django_site.git"
+remote_site_dir = "django_site"
 
 #usefull shortcut
 def prod():
@@ -59,16 +60,35 @@ def get_remote_home_dir():
 def get_remote_repo_dir():
     return  os.path.join(get_remote_home_dir(),remote_repo_sub_dir)
 
+@memoized
+def get_remote_site_dir():
+    return  os.path.join(get_remote_home_dir(),remote_site_dir)
+
+
+
 #operations
 def init_master_repo():
     """
-    Initialises master repository
+    Initializes master repository
     """
     run("mkdir -p %s" % get_remote_repo_dir())
     with cd(get_remote_repo_dir()):
+        run("git config --global user.name '%s'" % env.user)
+        run("git config --global user.email %s@%s" % (env.user,env.host))
         run("git --bare init")
         with cd("hooks"):
             put("hooks/post-update",os.path.join(get_remote_repo_dir(),"hooks"), mode=0755)
+
+def init_master_site():
+    """
+    Initializes django_site on master server (connected to master repository)
+    """
+    run("git clone %s" % get_remote_repo_dir())
+#    with cd(get_remote_site_dir()):
+#        run("git --bare init")
+#        with cd("hooks"):
+#            put("hooks/post-update",os.path.join(get_remote_repo_dir(),"hooks"), mode=0755)
+    
 
 def connect_local():
     """
