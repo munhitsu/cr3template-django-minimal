@@ -32,6 +32,7 @@ fab goodies (connecting with remote server)
 	git branch dev
 	git checkout dev
 - ready to push
+	git push dev master
 	git push dev dev
 	git push prod master
 - create remote site (app instance)
