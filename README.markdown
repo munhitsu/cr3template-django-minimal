@@ -46,6 +46,7 @@ register it using: https://github.com/munhitsu/cr3components/admin
 	ssh server
 	cd django_site
 	make
+	./bin/django syncdb
 	/cr3studio/bin/restart-app-django
 
 
