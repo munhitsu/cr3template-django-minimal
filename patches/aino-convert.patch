@@ -1,0 +1,15 @@
+diff -Naur aino-convert-base/convert/base.py Copy of aino-convert-base/convert/base.py
+--- convert/base.py	2010-12-30 17:13:05.000000000 +0100
++++ convert/base.py	2010-12-30 17:10:59.000000000 +0100
+@@ -6,7 +6,10 @@
+ import socket
+ import urllib2
+ from os.path import isfile, isdir, getmtime, dirname, getsize, normpath, join as pjoin
+-from PIL import Image
++try:
++    import Image
++except:
++    from PIL import Image
+ from django.utils.encoding import force_unicode, smart_str, iri_to_uri
+ from django.utils._os import safe_join
+ from django.utils.safestring import mark_safe
