@@ -13,3 +13,9 @@ parts/
 fcgi.port
 .project
 .pydevproject
+download-cache/
+.pydevproject.bak
+.pydevproject
+/static/*
+/media/*
+.DS_Store
