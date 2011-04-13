@@ -1,5 +1,7 @@
 .DEFAULT_GOAL = development
 .PHONY = development clean
+ARCHFLAGS = "-arch i386 -arch x86_64"
+
 
 bootstrap.py :
 	wget http://svn.zope.org/*checkout*/zc.buildout/trunk/bootstrap/bootstrap.py
@@ -9,7 +11,7 @@ bin/buildout : bootstrap.py
 	python bootstrap.py
 
 development : bin/buildout
-	bin/buildout
+	env ARCHFLAGS=${ARCHFLAGS} bin/buildout
 
 clean :
 	rm -rf bin develop-eggs eggs parts .installed.cfg downloads bootstrap.py *.db
